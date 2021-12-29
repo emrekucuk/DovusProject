@@ -6,7 +6,7 @@ using DovusProject.DataAccess.Abstract;
 
 namespace DovusProject.Entities
 {
-    public class SavasLoglari : IEntity
+    public class MacLoglari : IEntity
     {
         public int Id { get; set; }
         public string Olaylar { get; set; }

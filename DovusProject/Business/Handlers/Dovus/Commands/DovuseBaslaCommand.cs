@@ -36,9 +36,9 @@ namespace DovusProject.Business.Handlers.Dovus.Commands
                     Oyuncu2Id = addedDovuscuOzellikleri.Data.Id
                 });
 
-                await _mediator.Send(new CreateSavasLogCommand()
+                await _mediator.Send(new CreateMacLogCommand()
                 {
-                    Olaylar = addedDovuscuOzellikleri.Data.Ad + "oluşturuldu. Armor King ile olan savaşı başladı."
+                    Olaylar = addedDovuscuOzellikleri.Data.Ad + " oluşturuldu. Armor King ile olan maçı başladı."
                 });
 
                 List<string> list = new List<string>();

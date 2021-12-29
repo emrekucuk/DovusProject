@@ -4,9 +4,9 @@ using DovusProject.Entities;
 
 namespace DovusProject.DataAccess.Concrete.EntityFramework
 {
-    public class SavasLoglariRepository : EfEntityRepositoryBase<SavasLoglari, ProjectDbContext>, ISavasLoglariRepository
+    public class MacLoglariRepository : EfEntityRepositoryBase<MacLoglari, ProjectDbContext>, IMacLoglariRepository
     {
-            public SavasLoglariRepository(ProjectDbContext context) : base(context)
+            public MacLoglariRepository(ProjectDbContext context) : base(context)
             {
             }
         }

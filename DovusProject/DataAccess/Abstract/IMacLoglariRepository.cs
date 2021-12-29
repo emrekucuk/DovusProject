@@ -2,7 +2,7 @@
 
 namespace DovusProject.DataAccess.Abstract
 {
-    public interface ISavasLoglariRepository : IEntityRepository<SavasLoglari>
+    public interface IMacLoglariRepository : IEntityRepository<MacLoglari>
     {
 
     }

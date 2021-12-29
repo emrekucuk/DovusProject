@@ -31,17 +31,6 @@ namespace DovusProject.WebApi.Controllers
             return BadRequest(result.Message);
         }
         
-        [HttpPost]
-        public async Task<IActionResult> CreateDovuscuOzellikleri([FromBody] CreateDovuscuOzellikleriCommand createDovuscuOzellikleri)
-        {
-            var result = await Mediator.Send(createDovuscuOzellikleri);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-        
         [HttpPut]
         public async Task<IActionResult> UpdateDovuscuOzellikleri([FromBody] UpdateDovuscuOzellikleriCommand updateDovuscuOzellikleri)
         {

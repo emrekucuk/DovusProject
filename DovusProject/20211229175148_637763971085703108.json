@@ -1,0 +1,37 @@
+{
+  "EventType": "ProjectDbContext",
+  "Environment": {
+    "UserName": "ROBOPLAS",
+    "MachineName": "YAZILIM-PC07",
+    "DomainName": "YAZILIM-PC07",
+    "CallingMethodName": "Audit.EntityFramework.DbContextHelper+<CreateAuditScopeAsync>d__31.MoveNext()",
+    "AssemblyName": "Audit.EntityFramework.Core, Version=17.0.4.0, Culture=neutral, PublicKeyToken=571d6b80b242c87e",
+    "Exception": "COMException: 0xE0434352",
+    "Culture": "tr-TR"
+  },
+  "StartDate": "2021-12-29T17:51:48.451607Z",
+  "EndDate": "2021-12-29T17:51:48.5702925Z",
+  "Duration": 119,
+  "EntityFrameworkEvent": {
+    "Database": "projectDb",
+    "ConnectionId": "e1a6caf6-c6ea-4237-ab66-c1a9496ffb3c",
+    "Entries": [
+      {
+        "Table": "MacLoglari",
+        "Name": "MacLoglari",
+        "Action": "Insert",
+        "PrimaryKey": {
+          "Id": -2147482647
+        },
+        "ColumnValues": {
+          "Id": -2147482647,
+          "Olaylar": "Oyuncu 2oluşturuldu. Armor King ile olan savaşı başladı."
+        },
+        "Valid": true
+      }
+    ],
+    "Result": 0,
+    "Success": false,
+    "ErrorMessage": "Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.\r\n ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MacLoglari'.\r\n   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)\r\n   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()\r\n   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\nClientConnectionId:e1a6caf6-c6ea-4237-ab66-c1a9496ffb3c\r\nError Number:208,State:1,Class:16\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Audit.EntityFramework.DbContextHelper.SaveChangesAsync(IAuditDbContext context, Func`1 baseSaveChanges)"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "EventType": "ProjectDbContext",
+  "Environment": {
+    "UserName": "ROBOPLAS",
+    "MachineName": "YAZILIM-PC07",
+    "DomainName": "YAZILIM-PC07",
+    "CallingMethodName": "Audit.EntityFramework.DbContextHelper+<CreateAuditScopeAsync>d__31.MoveNext()",
+    "AssemblyName": "Audit.EntityFramework.Core, Version=17.0.4.0, Culture=neutral, PublicKeyToken=571d6b80b242c87e",
+    "Culture": "tr-TR"
+  },
+  "StartDate": "2021-12-29T18:20:22.5188061Z",
+  "EndDate": "2021-12-29T18:20:22.5299052Z",
+  "Duration": 11,
+  "EntityFrameworkEvent": {
+    "Database": "projectDb",
+    "ConnectionId": "abb00f19-74f5-4ad2-9049-c1dbf1bc2140",
+    "Entries": [
+      {
+        "Table": "MacLoglari",
+        "Name": "MacLoglari",
+        "Action": "Insert",
+        "PrimaryKey": {
+          "Id": 4
+        },
+        "ColumnValues": {
+          "Id": 4,
+          "Olaylar": "Armor King, Oyuncu 2'den darbe aldı."
+        },
+        "Valid": true
+      },
+      {
+        "Table": "DovuscuOzellikleri",
+        "Name": "DovuscuOzellikleri",
+        "Action": "Update",
+        "PrimaryKey": {
+          "Id": 1
+        },
+        "Changes": [
+          {
+            "ColumnName": "CanDegeri",
+            "OriginalValue": 76,
+            "NewValue": 64
+          },
+          {
+            "ColumnName": "ZırhDegeri",
+            "OriginalValue": 90,
+            "NewValue": 85
+          }
+        ],
+        "ColumnValues": {
+          "Id": 1,
+          "Ad": "Armor King",
+          "CanDegeri": 64,
+          "DuzVurusHasari": 10,
+          "Yetenek1": "Aparkat",
+          "Yetenek1Hasari": 25,
+          "Yetenek2": "Döner Tekme",
+          "Yetenek2Hasari": 35,
+          "ZırhDegeri": 85
+        },
+        "Valid": true
+      }
+    ],
+    "Result": 2,
+    "Success": true
+  }
+}

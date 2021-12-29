@@ -1,0 +1,84 @@
+{
+  "EventType": "ProjectDbContext",
+  "Environment": {
+    "UserName": "ROBOPLAS",
+    "MachineName": "YAZILIM-PC07",
+    "DomainName": "YAZILIM-PC07",
+    "CallingMethodName": "System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start()",
+    "AssemblyName": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "Culture": "tr-TR"
+  },
+  "StartDate": "2021-12-29T18:20:37.7605835Z",
+  "EndDate": "2021-12-29T18:20:37.7643383Z",
+  "Duration": 4,
+  "EntityFrameworkEvent": {
+    "Database": "projectDb",
+    "ConnectionId": "abb00f19-74f5-4ad2-9049-c1dbf1bc2140",
+    "Entries": [
+      {
+        "Table": "DovuscuOzellikleri",
+        "Name": "DovuscuOzellikleri",
+        "Action": "Update",
+        "PrimaryKey": {
+          "Id": 1
+        },
+        "Changes": [
+          {
+            "ColumnName": "Ad",
+            "OriginalValue": "Armor King",
+            "NewValue": "Armor King"
+          },
+          {
+            "ColumnName": "CanDegeri",
+            "OriginalValue": -8,
+            "NewValue": -8
+          },
+          {
+            "ColumnName": "DuzVurusHasari",
+            "OriginalValue": 10,
+            "NewValue": 10
+          },
+          {
+            "ColumnName": "Yetenek1",
+            "OriginalValue": "Aparkat",
+            "NewValue": "Aparkat"
+          },
+          {
+            "ColumnName": "Yetenek1Hasari",
+            "OriginalValue": 25,
+            "NewValue": 25
+          },
+          {
+            "ColumnName": "Yetenek2",
+            "OriginalValue": "Döner Tekme",
+            "NewValue": "Döner Tekme"
+          },
+          {
+            "ColumnName": "Yetenek2Hasari",
+            "OriginalValue": 35,
+            "NewValue": 35
+          },
+          {
+            "ColumnName": "ZırhDegeri",
+            "OriginalValue": 55,
+            "NewValue": 55
+          }
+        ],
+        "ColumnValues": {
+          "Id": 1,
+          "Ad": "Armor King",
+          "CanDegeri": -8,
+          "DuzVurusHasari": 10,
+          "Yetenek1": "Aparkat",
+          "Yetenek1Hasari": 25,
+          "Yetenek2": "Döner Tekme",
+          "Yetenek2Hasari": 35,
+          "ZırhDegeri": 55
+        },
+        "Valid": true
+      }
+    ],
+    "Result": 1,
+    "Success": true
+  }
+}

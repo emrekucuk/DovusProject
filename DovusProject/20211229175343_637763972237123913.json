@@ -1,0 +1,35 @@
+{
+  "EventType": "ProjectDbContext",
+  "Environment": {
+    "UserName": "ROBOPLAS",
+    "MachineName": "YAZILIM-PC07",
+    "DomainName": "YAZILIM-PC07",
+    "CallingMethodName": "Audit.EntityFramework.DbContextHelper+<CreateAuditScopeAsync>d__31.MoveNext()",
+    "AssemblyName": "Audit.EntityFramework.Core, Version=17.0.4.0, Culture=neutral, PublicKeyToken=571d6b80b242c87e",
+    "Culture": "tr-TR"
+  },
+  "StartDate": "2021-12-29T17:53:43.7056967Z",
+  "EndDate": "2021-12-29T17:53:43.7123616Z",
+  "Duration": 7,
+  "EntityFrameworkEvent": {
+    "Database": "projectDb",
+    "ConnectionId": "0eb71093-8f9a-4efc-8b3c-c702eed30732",
+    "Entries": [
+      {
+        "Table": "MacLoglari",
+        "Name": "MacLoglari",
+        "Action": "Insert",
+        "PrimaryKey": {
+          "Id": 1
+        },
+        "ColumnValues": {
+          "Id": 1,
+          "Olaylar": "Oyuncu 2oluşturuldu. Armor King ile olan savaşı başladı."
+        },
+        "Valid": true
+      }
+    ],
+    "Result": 1,
+    "Success": true
+  }
+}

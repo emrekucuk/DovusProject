@@ -31,7 +31,7 @@ namespace DovusProject.Business.Handlers.GecmisMaclar.Commands
                 
                 _gecmisMaclar.Update(addedDovus);
                 await _gecmisMaclar.SaveChangesAsync();
-                return new SuccessDataResult<Entities.GecmisMaclar>(addedDovus, "Güncellendi");
+                return new SuccessDataResult<Entities.GecmisMaclar>(addedDovus, "Eklendi");
 
             }
         }

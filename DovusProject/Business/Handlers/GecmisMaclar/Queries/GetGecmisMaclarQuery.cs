@@ -20,8 +20,8 @@ namespace DovusProject.Business.Handlers.GecmisMaclar.Queries
 
             public async Task<IDataResult<IEnumerable<Entities.GecmisMaclar>>> Handle(GetGecmisMaclarQuery request, CancellationToken cancellationToken)
             {
-                var gecmisMacList = await _gecmisMaclarRepository.GetListAsync();
-                return new SuccessDataResult<IEnumerable<Entities.GecmisMaclar>>(gecmisMacList);
+                var gecmisMaclar = await _gecmisMaclarRepository.GetListAsync();
+                return new SuccessDataResult<IEnumerable<Entities.GecmisMaclar>>(gecmisMaclar);
             }
         }
     }

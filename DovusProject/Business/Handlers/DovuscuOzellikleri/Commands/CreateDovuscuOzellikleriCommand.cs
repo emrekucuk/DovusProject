@@ -27,7 +27,7 @@ namespace DovusProject.Business.Handlers.DovuscuOzellikleri.Commands
             {
                 var list = _dovuscuOzellikleriRepository.GetList().Count() + 1;
                 Random random = new Random();
-                var dovuscu = new Entities.DovuscuOzellikleri()
+                var addDovuscu = new Entities.DovuscuOzellikleri()
                 {
                     Ad = "Oyuncu " + list,
                     CanDegeri = 100,
@@ -38,9 +38,9 @@ namespace DovusProject.Business.Handlers.DovuscuOzellikleri.Commands
                     Yetenek2 = request.Yetenek2,
                     Yetenek2Hasari = random.Next(30,40)
                 };
-                _dovuscuOzellikleriRepository.Add(dovuscu);
+                _dovuscuOzellikleriRepository.Add(addDovuscu);
                 await _dovuscuOzellikleriRepository.SaveChangesAsync();
-                return new SuccessDataResult<Entities.DovuscuOzellikleri>(dovuscu, "Eklendi");
+                return new SuccessDataResult<Entities.DovuscuOzellikleri>(addDovuscu, "Eklendi");
             }
         }
     }

@@ -27,7 +27,7 @@ namespace DovusProject.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SavasLoglari",
+                name: "MacLoglari",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -88,7 +88,7 @@ namespace DovusProject.Migrations
                 name: "GecmisMaclar");
 
             migrationBuilder.DropTable(
-                name: "SavasLoglari");
+                name: "MacLoglari");
 
             migrationBuilder.DropTable(
                 name: "DovuscuOzellikleri");

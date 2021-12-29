@@ -94,7 +94,7 @@ namespace DovusProject.Migrations
                     b.ToTable("GecmisMaclar");
                 });
 
-            modelBuilder.Entity("DovusProject.Entities.SavasLoglari", b =>
+            modelBuilder.Entity("DovusProject.Entities.MacLoglari", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -106,7 +106,7 @@ namespace DovusProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SavasLoglari");
+                    b.ToTable("MacLoglari");
                 });
 
             modelBuilder.Entity("DovusProject.Entities.GecmisMaclar", b =>

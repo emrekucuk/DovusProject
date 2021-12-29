@@ -9,7 +9,7 @@ namespace DovusProject.DataAccess.Concrete.EntityFramework.Context
     {
         public DbSet<DovuscuOzellikleri> DovuscuOzellikleri { get; set; }
         public DbSet<GecmisMaclar> GecmisMaclar { get; set; }
-        public DbSet<SavasLoglari> SavasLoglari { get; set; }
+        public DbSet<MacLoglari> MacLoglari { get; set; }
 
 
         public ProjectDbContext(DbContextOptions<ProjectDbContext> options) : base(options)
