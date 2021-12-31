@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using DovusProject.Business.Handlers.SwaggerClass;
 using DovusProject.DataAccess.Abstract;
 using DovusProject.DataAccess.Concrete.EntityFramework;
 using DovusProject.DataAccess.Concrete.EntityFramework.Context;
