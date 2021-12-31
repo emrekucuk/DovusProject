@@ -23,5 +23,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Business\Handlers\Maclar\Queries\" />
+  </ItemGroup>
+
 
 </Project>

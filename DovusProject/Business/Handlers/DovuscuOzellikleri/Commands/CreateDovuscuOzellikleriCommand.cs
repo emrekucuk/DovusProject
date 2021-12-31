@@ -29,7 +29,7 @@ namespace DovusProject.Business.Handlers.DovuscuOzellikleri.Commands
                 Random random = new Random();
                 var addDovuscu = new Entities.DovuscuOzellikleri()
                 {
-                    Ad = "Oyuncu " + list,
+                    Ad = "Dövüşçü " + list,
                     CanDegeri = 100,
                     ZırhDegeri = 100,
                     DuzVurusHasari = random.Next(10,20),

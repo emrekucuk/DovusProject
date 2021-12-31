@@ -59,6 +59,7 @@ namespace DovusProject
             services.AddTransient<IDovuscuOzellikleriRepository, DovuscuOzellikleriRepository>();
             services.AddTransient<IGecmisMaclarRepository, GecmisMaclarRepository>();
             services.AddTransient<IMacLoglariRepository, MacLoglariRepository>();
+            services.AddTransient<IMacRepository, MacRepository>();
         }
     }
 }

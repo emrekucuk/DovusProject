@@ -8,8 +8,9 @@ namespace DovusProject.Business.Handlers.GecmisMaclar.Commands
 {
     public class CreateGecmisMaclarCommand : IRequest<IDataResult<Entities.GecmisMaclar>>
     {
-        public int Oyuncu1Id { get; set; }
-        public int Oyuncu2Id { get; set; }
+        public int Dovuscu1Id { get; set; }
+        public int Dovuscu2Id { get; set; }
+        public int KazananId { get; set; }
         public class CreateGecmisMaclarCommandHandler : IRequestHandler<CreateGecmisMaclarCommand, IDataResult<Entities.GecmisMaclar>>
         {
             private readonly IGecmisMaclarRepository _gecmisMaclar;
@@ -25,8 +26,9 @@ namespace DovusProject.Business.Handlers.GecmisMaclar.Commands
             {
                 var addedDovus = new Entities.GecmisMaclar()
                 {
-                    Oyuncu1Id = request.Oyuncu1Id,
-                    Oyuncu2Id = request.Oyuncu2Id
+                    Dovuscu1Id = request.Dovuscu1Id,
+                    Dovuscu2Id = request.Dovuscu2Id,
+                    KazananId = request.KazananId
                 };
                 
                 _gecmisMaclar.Update(addedDovus);

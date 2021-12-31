@@ -8,10 +8,10 @@ namespace DovusProject.WebApi.Controllers
     [Route("api/[controller]")]
     public class GecmisMaclarController : BaseApiController
     {
-        [HttpGet("get")]
-        public async Task<IActionResult> Get(int id)
+        [HttpGet("getbyid")]
+        public async Task<IActionResult> Get([FromBody] GetGecmisMacQuery getGecmisMacQuery)
         {
-            var result = await Mediator.Send(new GetGecmisMacQuery(){Id = id});
+            var result = await Mediator.Send(getGecmisMacQuery);
             if (result.Success)
             {
                 return Ok(result.Data);

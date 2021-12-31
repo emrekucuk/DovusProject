@@ -4,7 +4,7 @@ using DovusProject.Business.Results;
 using DovusProject.DataAccess.Abstract;
 using MediatR;
 
-namespace DovusProject.Business.Handlers.SavasLoglari.Queries
+namespace DovusProject.Business.Handlers.MacLoglari.Queries
 {
     public class GetMacLogQuery : IRequest<IDataResult<Entities.MacLoglari>>
     {

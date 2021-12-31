@@ -4,7 +4,7 @@ using DovusProject.Business.Results;
 using DovusProject.DataAccess.Abstract;
 using MediatR;
 
-namespace DovusProject.Business.Handlers.SavasLoglari.Commands
+namespace DovusProject.Business.Handlers.MacLoglari.Commands
 {
     public class CreateMacLogCommand : IRequest<IResult>
     {

@@ -3,7 +3,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using DovusProject.Business.Handlers.DovuscuOzellikleri.Commands;
 using DovusProject.Business.Handlers.GecmisMaclar.Commands;
-using DovusProject.Business.Handlers.SavasLoglari.Commands;
+using DovusProject.Business.Handlers.Maclar.Commands;
+using DovusProject.Business.Handlers.MacLoglari.Commands;
 using DovusProject.Business.Results;
 using MediatR;
 
@@ -30,10 +31,11 @@ namespace DovusProject.Business.Handlers.Dovus.Commands
                     Yetenek1 = request.Yetenek1,
                     Yetenek2 = request.Yetenek2
                 });
-                var addedDovus = await _mediator.Send(new CreateGecmisMaclarCommand()
+
+                var addedDovus = await _mediator.Send(new CreateMacCommand()
                 {
-                    Oyuncu1Id = 1,
-                    Oyuncu2Id = addedDovuscuOzellikleri.Data.Id
+                   Dovuscu1 = 1,
+                   Dovuscu2 = addedDovuscuOzellikleri.Data.Id
                 });
 
                 await _mediator.Send(new CreateMacLogCommand()
@@ -42,8 +44,9 @@ namespace DovusProject.Business.Handlers.Dovus.Commands
                 });
 
                 List<string> list = new List<string>();
-                list.Add("oyuncu 1 id = " + addedDovus.Data.Oyuncu1Id);
-                list.Add("oyuncu 2 id = " + addedDovus.Data.Oyuncu2Id);
+                list.Add("Dövüşçü 1 id = " + addedDovus.Data.Dovuscu1);
+                list.Add("Dövüşçü 2 id = " + addedDovus.Data.Dovuscu2);
+                list.Add("Vuruş Sırası = "+ addedDovus.Data.VurmaSirasi);
                 list.Add("Düz vuruş = 1" );
                 list.Add("Yetenek 1 = 2" );
                 list.Add("Yetenek 2 = 3" );

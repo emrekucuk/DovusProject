@@ -9,10 +9,10 @@ namespace DovusProject.WebApi.Controllers
     [Route("api/[controller]")]
     public class DovuscuOzellikleriController : BaseApiController
     {
-        [HttpGet("get")]
-        public async Task<IActionResult> Get(int id)
+        [HttpGet("getbyid")]
+        public async Task<IActionResult> Get([FromBody] GetDovuscuOzellikQuery getDovuscuOzellikQuery)
         {
-            var result = await Mediator.Send(new GetDovuscuOzellikQuery(){Id = id});
+            var result = await Mediator.Send(getDovuscuOzellikQuery);
             if (result.Success)
             {
                 return Ok(result.Data);
@@ -42,16 +42,5 @@ namespace DovusProject.WebApi.Controllers
             return BadRequest(result);
         }
         
-        [HttpDelete]
-        public async Task<IActionResult> DeleteDovuscuOzellikleri([FromBody] DeleteDovuscuOzellikleriCommand deleteDovuscuOzellikleri)
-        {
-            var result = await Mediator.Send(deleteDovuscuOzellikleri);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-
     }
 }

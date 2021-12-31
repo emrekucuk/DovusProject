@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DovusProject.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20211228200025_db")]
+    [Migration("20211229203454_db")]
     partial class db
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,22 +78,43 @@ namespace DovusProject.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("Dovuscu1Id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Dovuscu2Id")
+                        .HasColumnType("int");
+
                     b.Property<int>("KazananId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Oyuncu1Id")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Oyuncu2Id")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Oyuncu1Id");
+                    b.HasIndex("Dovuscu1Id");
 
-                    b.HasIndex("Oyuncu2Id");
+                    b.HasIndex("Dovuscu2Id");
 
                     b.ToTable("GecmisMaclar");
+                });
+
+            modelBuilder.Entity("DovusProject.Entities.Mac", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Dovuscu1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Dovuscu2")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VurmaSirasi")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Maclar");
                 });
 
             modelBuilder.Entity("DovusProject.Entities.MacLoglari", b =>
@@ -113,17 +134,17 @@ namespace DovusProject.Migrations
 
             modelBuilder.Entity("DovusProject.Entities.GecmisMaclar", b =>
                 {
-                    b.HasOne("DovusProject.Entities.DovuscuOzellikleri", "Oyuncu1")
+                    b.HasOne("DovusProject.Entities.DovuscuOzellikleri", "Dovuscu1")
                         .WithMany()
-                        .HasForeignKey("Oyuncu1Id");
+                        .HasForeignKey("Dovuscu1Id");
 
-                    b.HasOne("DovusProject.Entities.DovuscuOzellikleri", "Oyuncu2")
+                    b.HasOne("DovusProject.Entities.DovuscuOzellikleri", "Dovuscu2")
                         .WithMany()
-                        .HasForeignKey("Oyuncu2Id");
+                        .HasForeignKey("Dovuscu2Id");
 
-                    b.Navigation("Oyuncu1");
+                    b.Navigation("Dovuscu1");
 
-                    b.Navigation("Oyuncu2");
+                    b.Navigation("Dovuscu2");
                 });
 #pragma warning restore 612, 618
         }

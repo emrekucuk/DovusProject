@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using DovusProject.Business.Handlers.SavasLoglari.Queries;
+using DovusProject.Business.Handlers.MacLoglari.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DovusProject.WebApi.Controllers
@@ -8,10 +8,10 @@ namespace DovusProject.WebApi.Controllers
     [Route("api/[controller]")]
     public class MacLoglariController : BaseApiController
     {
-        [HttpGet("get")]
-        public async Task<IActionResult> Get(int id)
+        [HttpGet("getbyid")]
+        public async Task<IActionResult> Get([FromBody] GetMacLogQuery getMacLogQuery)
         {
-            var result = await Mediator.Send(new GetMacLogQuery(){Id = id});
+            var result = await Mediator.Send(getMacLogQuery);
             if (result.Success)
             {
                 return Ok(result.Data);
