@@ -4,11 +4,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using DovusProject.Business.Handlers.SwaggerClass;
 using DovusProject.DataAccess.Abstract;
 using DovusProject.DataAccess.Concrete.EntityFramework;
 using DovusProject.DataAccess.Concrete.EntityFramework.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 namespace DovusProject
 {
@@ -31,6 +33,10 @@ namespace DovusProject
             services.AddMediatR(typeof(Startup));
             var assembly = AppDomain.CurrentDomain.Load("DovusProject");
             services.AddMediatR(assembly);
+            services.AddSwaggerGen(x =>
+            {
+                x.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +56,12 @@ namespace DovusProject
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger");
             });
         }
 
